@@ -6,32 +6,38 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-
+import java.util.jar.Attributes.Name
 
 
 class MainActivity : AppCompatActivity() {
 
-    class Programado : ProgramadorInterface{
-
-        private fun getName(): String{
-            return "Daniel"
-        }
-
-        private fun getAge(): Int{
-            return 25
-        }
-
-        private fun getLanguage(): String{
-            return "Kotlin"
-        }
-
-        override fun getProgrammerData(): ProgrammerData {
-            val name = getName()
-            val age = getAge()
-            val language = getLanguage()
-            return ProgrammerData(name, age, language)
-        }
+    object datosUsuario{
+        const val Name: String = "Daniel"
+        const val Age: Int = 25
+        const val Language: String = "Kotlin"
     }
+
+   class Programador : ProgramadorInterface{
+
+
+       private fun getNombre(): String {
+           return datosUsuario.Name
+       }
+
+       private fun getAge(): Int{
+           return datosUsuario.Age
+       }
+
+       private fun getLanguage(): String{
+           return datosUsuario.Language
+       }
+
+       override fun getProgrammerData(): ProgrammerData {
+           val usuario : ProgrammerData = ProgrammerData(getNombre(),getAge(),getLanguage())
+           return usuario
+       }
+
+   }
 
 
     interface ProgramadorInterface{
@@ -45,10 +51,6 @@ class MainActivity : AppCompatActivity() {
         val language: String){
     }
 
-    fun main(){
-        val datos = Programado().getProgrammerData()
-        println(datos)
-    }
 
 }
 
