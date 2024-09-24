@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ej2</string>
+    <string name="mens_error_acceso">Error al inicar sesión. No es usuario del sistema</string>
+    <string name="mens_menor_edad">No puede entrar eres menor de edad</string>
+    <string name="mens_mayor_edad">No puedes entrar, eres mayor de edad</string>
+    <string name="mens_final">Acceso autorizado, sus Hobbies son: </string>
+    <string name="mensErrorCadena">No puedes entrar,edad errónea</string>
+</resources>
