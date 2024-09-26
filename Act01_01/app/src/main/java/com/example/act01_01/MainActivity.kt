@@ -6,8 +6,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import java.util.jar.Attributes.Name
+import java.util.jar.Attributes.Name//
 
+
+//Daniel Darmanin Casariego
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,7 +40,6 @@ class MainActivity : AppCompatActivity() {
        }
 
    }
-
 
     interface ProgramadorInterface{
             fun getProgrammerData(): ProgrammerData
