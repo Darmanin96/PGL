@@ -37,12 +37,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun TransformarDistancias(){
         transformarDistancias.setOnClickListener {
-            val millasEnMetros = (millas.text.toString().toDoubleOrNull() ?: 0.0) * 1603.344
+            val millasEnMetros = (millas.text.toString().toDoubleOrNull() ?: 0.0) * 1609.344
             val piesEnMetros = (pies.text.toString().toDoubleOrNull() ?: 0.0) * 0.3048
             val pulgadasEnMetros = (pulgadas.text.toString().toDoubleOrNull() ?: 0.0) * 0.0254
             val intent = Intent(this,Actividad2::class.java)
             val bundle = Bundle().apply {
-                putDouble("Milla en metros",millasEnMetros)
+                putDouble("Millas en metros",millasEnMetros)
                 putDouble("Pies en metros",piesEnMetros)
                 putDouble("Pulgadas en metros",pulgadasEnMetros)
 
