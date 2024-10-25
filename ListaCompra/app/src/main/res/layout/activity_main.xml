@@ -26,7 +26,7 @@
         app:layout_constraintVertical_bias="0.533" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/listaCompra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -58,7 +58,7 @@
         app:srcCompat="@android:drawable/ic_menu_add" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/Productos"
         android:layout_width="133dp"
         android:layout_height="48dp"
         android:layout_marginStart="1dp"
@@ -70,13 +70,13 @@
         android:text=""
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText2"
+        app:layout_constraintEnd_toStartOf="@+id/Cantidad"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/listaCompra"
         app:layout_constraintVertical_bias="0.75" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/Cantidad"
         android:layout_width="78dp"
         android:layout_height="48dp"
         android:layout_marginStart="30dp"
@@ -84,17 +84,17 @@
         android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="Cantidad"
-        android:inputType="text"
+        android:inputType="number"
         android:text=""
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText3"
-        app:layout_constraintStart_toEndOf="@+id/editTextText"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/Precio"
+        app:layout_constraintStart_toEndOf="@+id/Productos"
+        app:layout_constraintTop_toBottomOf="@+id/listaCompra"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/Precio"
         android:layout_width="71dp"
         android:layout_height="48dp"
         android:layout_marginStart="1dp"
@@ -103,13 +103,25 @@
         android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="Precio"
-        android:inputType="text"
+        android:inputType="numberDecimal"
         android:text=""
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Añadir"
-        app:layout_constraintStart_toEndOf="@+id/editTextText2"
+        app:layout_constraintStart_toEndOf="@+id/Cantidad"
         app:layout_constraintTop_toBottomOf="@+id/Título"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="409dp"
+        android:layout_height="530dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/Añadir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listaCompra" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
