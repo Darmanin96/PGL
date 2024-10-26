@@ -1,8 +1,10 @@
 package com.example.distancia
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+//Daniel Darmnain Casariego
 
 
 class Actividad2 : AppCompatActivity() {
@@ -20,6 +22,7 @@ class Actividad2 : AppCompatActivity() {
         imprimir = findViewById(R.id.resultado)
     }
 
+    @SuppressLint("DefaultLocale")
     private fun sumar() {
         val bundle = intent.extras
         val millas = bundle?.getDouble("Milla en metros") ?: 0.0

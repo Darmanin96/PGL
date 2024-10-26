@@ -7,6 +7,7 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    //Daniel Darmanin Casariego
 
     private lateinit var millas: EditText
     private lateinit var pies: EditText
