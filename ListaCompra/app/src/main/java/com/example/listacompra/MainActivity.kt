@@ -17,6 +17,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.io.Serializable
 
+//Daniel Darmanin Casariego
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var productos: EditText
@@ -34,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         setupAdapter()
         setupListeners()
 
-        // Para ajustar los margenes con las barras del sistema en modo edge-to-edge
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -52,7 +54,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupAdapter() {
         adapter = ProductoAdapter(this, listaCompra)
-        lista.adapter = adapter // Asigna el adaptador al ListView
+        lista.adapter = adapter
     }
 
     private fun setupListeners() {
