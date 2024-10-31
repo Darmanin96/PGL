@@ -25,20 +25,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.533" />
 
-    <TextView
-        android:id="@+id/listaCompra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="38dp"
-        android:layout_marginEnd="228dp"
-        android:layout_marginBottom="604dp"
-        android:text="Lista de la compra:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Título" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/Añadir"
         android:layout_width="wrap_content"
@@ -62,7 +48,6 @@
         android:layout_width="133dp"
         android:layout_height="48dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="548dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="Producto"
@@ -71,16 +56,13 @@
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Cantidad"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listaCompra"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/Cantidad"
         android:layout_width="78dp"
         android:layout_height="48dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="548dp"
         android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="Cantidad"
@@ -89,9 +71,7 @@
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Precio"
-        app:layout_constraintStart_toEndOf="@+id/Productos"
-        app:layout_constraintTop_toBottomOf="@+id/listaCompra"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toEndOf="@+id/Productos" />
 
     <EditText
         android:id="@+id/Precio"
@@ -114,14 +94,42 @@
 
     <ListView
         android:id="@+id/lista"
-        android:layout_width="409dp"
-        android:layout_height="530dp"
+        android:layout_width="396dp"
+        android:layout_height="501dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toTopOf="@+id/Añadir"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.769"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/totalProdcutos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="26dp"
+        android:text="Total de productos:"
+        app:layout_constraintBottom_toTopOf="@+id/lista"
+        app:layout_constraintEnd_toStartOf="@+id/totalPrecio"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listaCompra" />
+        app:layout_constraintTop_toBottomOf="@+id/Título" />
+
+    <TextView
+        android:id="@+id/totalPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:text="Total precio de los productos"
+        app:layout_constraintBottom_toTopOf="@+id/lista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/totalProdcutos"
+        app:layout_constraintTop_toBottomOf="@+id/Título"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
