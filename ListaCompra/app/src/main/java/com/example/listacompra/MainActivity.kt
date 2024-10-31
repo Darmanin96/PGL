@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var añadir: FloatingActionButton
     private val listaCompra = ArrayList<Producto>()
     private lateinit var adapter: ProductoAdapter
+    private lateinit var totalProducto: TextView
+    private lateinit var totalPrecio: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +52,8 @@ class MainActivity : AppCompatActivity() {
         precio = findViewById(R.id.Precio)
         lista = findViewById(R.id.lista)
         añadir = findViewById(R.id.Añadir)
+        totalProducto = findViewById(R.id.totalProdcutos)
+        totalPrecio = findViewById(R.id.totalPrecio)
     }
 
     private fun setupAdapter() {
