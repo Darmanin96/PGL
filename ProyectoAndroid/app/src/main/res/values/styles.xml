@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema principal de tu aplicación -->
+    <style name="Theme.ProyectoAndroid" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/design_default_color_on_primary</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/design_default_color_on_primary</item>
+    </style>
+
+    <!-- Tema para el Splash Screen -->
+    <style name="Theme.ProyectoAndroid.Splash" parent="Theme.AppCompat.DayNight">
+        <item name="windowSplash">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_icon</item>
+        <item name="postSplashScreenTheme">@style/Theme.ProyectoAndroid</item>
+    </style>
+</resources>
